@@ -1,7 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "0.1.0",
-  "homepage": "https://joeparkes.github.io/personal-portfolio",
+  "homepage": "https://joeparkes.dev",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^2.2.0",
