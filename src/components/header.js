@@ -1,6 +1,3 @@
-import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
-import { ChatBubbleOvalLeftIcon } from "@heroicons/react/24/solid";
-import { LightBulbIcon } from "@heroicons/react/16/solid";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
@@ -13,6 +10,9 @@ import {
   Textarea,
 } from "@headlessui/react";
 import clsx from "clsx";
+import Github from "./icons/github";
+import Message from "./icons/message";
+import Bulb from "./icons/bulb";
 
 export default function Header() {
   let [isOpen, setIsOpen] = useState(false);
@@ -29,53 +29,33 @@ export default function Header() {
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
-        transition={{ duration: 2, delay: 0.5 }}
-        className="flex flex-col justify-center pb-10 items-center md:items-center z-20 relative"
+        transition={{ duration: 1, delay: 1.5 }}
+        className="flex flex-col justify-start pb-10 items-start z-20 relative"
       >
-        {/* Mobile */}
-        <div className="flex flex-row gap-3 items-center justify-center pt-6 pb-6 md:hidden w-full">
-          <button
-            className="font-poppins font-normal text-sm bg-transparent rounded-full px-4 py-2 text-black dark:text-white  hover:cursor-pointer flex items-center gap-2 whitespace-nowrap"
-            onClick={open}
-          >
-            Message me <ChatBubbleOvalLeftIcon className="w-4 h-4" />
-          </button>
-          <button
-            className="text-black font-poppins font-normal text-sm dark:text-white flex items-center gap-2 whitespace-nowrap px-4 py-2"
-            onClick={() => {
-              document.documentElement.classList.toggle("dark");
-            }}
-          >
-            {" "}
-            Light me
-            <LightBulbIcon className="w-4 h-4 hover:cursor-pointer" />
-          </button>
-        </div>
-
-        <h2 className="font-playfair font-normal text-black text-5xl dark:text-white pb-6">
-          Hey! I'm <strong>Joe</strong>
+        <h2 className="font-poppins font-normal text-5xl text-black dark:text-white text-left pb-4">
+          {" "}
+          Creating awesome user interfaces
         </h2>
-
-        <div className="flex flex-row items-center justify-center gap-2 w-full">
-          <h2 className="font-playfair font-normal text-black text-left text-lg md:text-2xl pb-2 dark:text-white md:text-center">
-            Crafting awesome user interfaces{" "}
-          </h2>
-        </div>
-
-        <p className="font-poppins font-normal text-sm text-black dark:text-white max-w-md mx-auto">
-          I'm a software engineer based in the UK. I'm passionate about creating
-          user-friendly and efficient web applications.
+        <p className="font-poppins font-normal text-sm text-black dark:text-white max-w-md text-left">
+          Hey there! 👋 I'm a software engineer from Birmingham, UK who loves
+          crafting delightful web experiences that people enjoy using. These
+          days, I'm leading the frontend team at Lovall, where I get to build
+          cool things every day.
         </p>
 
-        <div className="flex-row gap-3 justify-center items-center pt-6 pb-6 hidden md:flex">
+        <a href="https://github.com/joeparkes" class="pt-[24px]">
+          <Github />
+        </a>
+
+        {/* <div className="flex-row gap-3 justify-start items-center pt-6 pb-6 flex">
           <button className="relative font-poppins font-normal text-sm text-md bg-transparent rounded-full px-4 py-2 text-black dark:text-white  hover:cursor-pointer flex items-center gap-2 whitespace-nowrap before:absolute before:top-full before:right-0 before:left-auto before:w-full before:h-[1px] before:bg-current before:pointer-events-none before:content-[''] hover:before:animate-underline">
-            Github <ArrowUpRightIcon className="w-4 h-4" />
+            <Github />
           </button>
           <button
             className="relative font-poppins font-normal text-sm text-md bg-transparent rounded-full px-4 py-2 text-black dark:text-white  hover:cursor-pointer flex items-center gap-2 whitespace-nowrap before:absolute before:top-full before:right-0 before:left-auto before:w-full before:h-[1px] before:bg-current before:pointer-events-none before:content-[''] hover:before:animate-underline"
             onClick={open}
           >
-            Message me <ChatBubbleOvalLeftIcon className="w-4 h-4" />
+            <Message />
           </button>
           <button
             className="relative font-poppins font-normal text-sm text-md bg-transparent rounded-full px-4 py-2 text-black dark:text-white  hover:cursor-pointer flex items-center gap-2 whitespace-nowrap before:absolute before:top-full before:right-0 before:left-auto before:w-full before:h-[1px] before:bg-current before:pointer-events-none before:content-[''] hover:before:animate-underline"
@@ -84,10 +64,9 @@ export default function Header() {
             }}
           >
             {" "}
-            Light me
-            <LightBulbIcon className="w-4 h-4 hover:cursor-pointer" />
+            <Bulb />
           </button>
-        </div>
+        </div> */}
       </motion.div>
 
       <Dialog
@@ -153,7 +132,7 @@ export default function Header() {
                     }}
                     type="submit"
                   >
-                    Send <ArrowUpRightIcon className="w-4 h-4" />
+                    Send
                   </button>
                 </div>
               </form>

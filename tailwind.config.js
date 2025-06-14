@@ -6,6 +6,7 @@ module.exports = {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       playfair: ["Playfair Display", "serif"],
+      satoshi: ["Satoshi", "sans-serif"],
     },
     extend: {
       keyframes: {

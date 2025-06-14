@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { LightBulbIcon } from "@heroicons/react/24/solid";
 
 const ComingSoon = () => {
   return (
@@ -21,7 +20,6 @@ const ComingSoon = () => {
         >
           {" "}
           Light me
-          <LightBulbIcon className="w-4 h-4 hover:cursor-pointer" />
         </button>
       </div>
     </motion.div>
